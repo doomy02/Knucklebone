@@ -1,0 +1,114 @@
+/* Container styling */
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Grid container */
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Stack grids vertically */
+    align-items: center; /* Center grids horizontally */
+    margin-top: 20px;
+}
+
+/* Space between player grids */
+.grid-wrapper {
+    margin-bottom: 30px; /* Add space between player grids */
+}
+
+/* Align the grid and numbers properly */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Cells in the grid */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 18px; /* Font size */
+    font-family: 'Press Start 2P', cursive; /* Game-like font */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; /* Space around the button */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Center and position Roll the Dice and Back to Menu buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Dice container styling */
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center dice horizontally */
+    margin-left: 30px; /* Space between grids and dice */
+}
+
+.dice {
+    font-size: 80px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space between dice and buttons */
+}
+
+/* Container for numbers under/above the grid */
+.numbers {
+    display: flex;
+    justify-content: center; /* Center the numbers horizontally */
+    margin-bottom: 10px; /* Space between player 2's scores and grid */
+}
+
+/* Individual number styling */
+.number {
+    width: 100px;
+    height: 30px;
+    background-color: lightgray;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Total score styling */
+.total-score {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.total-number {
+    font-size: 22px;
+}

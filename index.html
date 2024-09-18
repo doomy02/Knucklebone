@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knuckle Bone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Home Page -->
+        <div class="container" id="start-menu">
+            <h2>Knuckle Bone</h2>
+            <button id="start-game">Start Game</button>
+            <button id="settings">Settings</button>
+            <button id="quit-game">Quit Game</button>
+        </div>
+
+        <!-- Game Page (Hidden initially) -->
+        <div class="container game-board" id="game-board" style="display: none;">
+            <h2>Knuckle Bone Game</h2>
+            <div class="grid-container">
+                <!-- 3x3 square for Player 2 -->
+                <div class="grid-wrapper">
+                    <div class="grid" id="player2-grid">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="numbers" id="player2-numbers">
+                        <div class="number">0</div>
+                        <div class="number">0</div>
+                        <div class="number">0</div>
+                    </div>
+                    <div class="total-score" id="player2-total">
+                        Total: <span class="total-number">0</span>
+                    </div>
+                </div>
+        
+                <!-- 3x3 square for Player 1 -->
+                <div class="grid-wrapper">
+                    <div class="grid" id="player1-grid">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="numbers" id="player1-numbers">
+                        <div class="number">0</div>
+                        <div class="number">0</div>
+                        <div class="number">0</div>
+                    </div>
+                    <div class="total-score" id="player1-total">
+                        Total: <span class="total-number">0</span>
+                    </div>
+                </div>
+        
+                <!-- Dice container -->
+                <div class="dice-container">
+                    <div class="dice" id="dice-display">🎲</div> <!-- Dice emoji or image -->
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="roll-dice">Roll the Dice</button>
+                <button id="back-to-menu">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
