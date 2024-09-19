@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         quitGameButton: document.getElementById('quit-game'),
         gameBoard: document.getElementById('game-board'),
         startGamePlayButton: document.getElementById('start-game-play'),
+        onlineGamePlayButton: document.getElementById('online-game-play'),
         player1NameInput: document.getElementById('player1-name'),
         player2NameInput: document.getElementById('player2-name'),
         currentPlayerNameDisplay: document.getElementById('current-player-name'),
         backToMenuButton: document.getElementById('back-to-menu'),
+        backToSetupButton: document.getElementById('back-to-setup'),
+        hostGameButton: document.getElementById('host-game'),
+        joinGameButton: document.getElementById('join-game'),
         diceDisplay: document.getElementById('dice-display'),
         rollDiceButton: document.getElementById('roll-dice'),
         player1Grid: document.getElementById('player1-grid'),
@@ -262,5 +266,32 @@ document.addEventListener('DOMContentLoaded', function() {
     DOCElements.quitGameButton.addEventListener('click', function() {
         // In a web browser environment, we can't close the window, so we'll redirect
         window.location.href = 'about:blank'; // Redirect to a blank page
+    });
+
+    DOCElements.onlineGamePlayButton.addEventListener('click', function() {
+        DOCElements.playerSetup.style.display = 'none';  // Hide the player setup screen
+        document.getElementById('online-setup').style.display = 'block';  // Show the online setup screen
+        document.getElementById('game-code-input').style.display = 'block';
+    });
+
+    DOCElements.backToSetupButton.addEventListener('click', function() {
+        DOCElements.playerSetup.style.display = 'block';  // Show the player setup screen
+        document.getElementById('online-setup').style.display = 'none';  // Hide the online setup screen
+    });
+
+    DOCElements.hostGameButton.addEventListener('click', function() {
+        let gameCode = Math.floor(Math.random() * 900000) + 100000;
+        alert('Your game code is: ' + gameCode);
+    });
+    
+    DOCElements.joinGameButton.addEventListener('click', function() {
+        const gameCodeInput = document.getElementById('game-code');
+        const enteredGameCode = gameCodeInput.value;
+    
+        if (/^\d{6}$/.test(enteredGameCode)) { // Validate that it's a 6-digit number
+            alert('Attempting to join game with code: ' + enteredGameCode);
+        } else {
+            alert('Please enter a valid 6-digit game code.');
+        }
     });
 });

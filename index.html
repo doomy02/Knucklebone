@@ -27,9 +27,29 @@
                 <label for="player2-name">Player 2 Name:</label>
                 <input type="text" id="player2-name" placeholder="Player 2" required>
             </div>
-            <button id="start-game-play">Start Game</button>
+            <button id="start-game-play">Local Game</button>
+            <button id="online-game-play">Online Game</button>
         </div>
 
+        <!-- Online Game Setup Page (Hidden initially) -->
+        <div class="container" id="online-setup" style="display: none;">
+            <h2>Online Game</h2>
+            <div>
+                <button id="host-game">Host Game</button>
+                <button id="join-game">Join Game</button>
+            </div>
+            <div id="game-code-input" style="display: none;">
+                <label for="game-code">Enter Game Code:</label>
+                <input type="text" id="game-code" placeholder="Game Code">
+            </div>
+            <button id="back-to-setup">Back</button>
+        </div>
+
+        <div id="game-code-input" style="display: none;">
+            <label for="game-code">Enter Game Code:</label>
+            <input type="text" id="game-code" placeholder="Game Code" maxlength="6">
+        </div>
+        
         <!-- Game Page (Hidden initially) -->
         <div class="container game-board" id="game-board" style="display: none;">
             <h2>Knuckle Bone Game</h2>
