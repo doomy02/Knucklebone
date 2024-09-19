@@ -16,9 +16,24 @@
             <button id="quit-game">Quit Game</button>
         </div>
 
+        <!-- Player Setup Page (Hidden initially) -->
+        <div class="container" id="player-setup" style="display: none;">
+            <h2>Enter Player Names</h2>
+            <div>
+                <label for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" placeholder="Player 1" required>
+            </div>
+            <div>
+                <label for="player2-name">Player 2 Name:</label>
+                <input type="text" id="player2-name" placeholder="Player 2" required>
+            </div>
+            <button id="start-game-play">Start Game</button>
+        </div>
+
         <!-- Game Page (Hidden initially) -->
         <div class="container game-board" id="game-board" style="display: none;">
             <h2>Knuckle Bone Game</h2>
+            <h3 id="current-player-name"></h3> <!-- Display current player's name -->
             <div class="grid-container">
                 <!-- 3x3 square for Player 2 -->
                 <div class="grid-wrapper">
